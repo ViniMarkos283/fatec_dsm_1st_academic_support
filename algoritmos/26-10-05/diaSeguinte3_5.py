@@ -73,7 +73,7 @@ def exibe_dps_a(d:int,m:int,a:int):                             # função que e
     print(f'dois dias depois: {d}/{m}/{a}')                         # imprimimos a data obtida
 
 # [Upgrade 2 - edição lucio, usando lista]
-def exibe_ds2(d:int,m:int,a:int):                                # função que exibe o dia seguinte ao que foi informado
+def exibe_ds2(d:int,m:int,a:int):                                # função que exibe o dia seguinte ao que foi informado, mas com lista
     if d+1 > dia_maximo(m, a):                                      # se o dia seguinte foi maior q o dia maximo daquele mes...
         d = 1                                                       # o proximo dia é o primeiro dia do mes
         m += 1                                                      # e passamos pro mes seguinte
@@ -82,7 +82,7 @@ def exibe_ds2(d:int,m:int,a:int):                                # função que 
     if m > 12:                                                      # se o mes ultrapassar dezembro...
         m = 1                                                       # ...o mes seguinte será janeiro
         a += 1                                                      # e passamos pro proximo ano
-    return [d,m,a]
+    return [d,m,a]                                                  # devolvemos os 3 valores dentro da lista
 
 def main():                                                     # função inicial, a que chama as outras e resolve o problema principal
     d, m, a= map(int, input('Data? ').split('/'))                   # pediremos ao usuario q digite uma data no formato dd/mm/aaaa, e depois convertemos para int e dividimos os valores nas variaveis d, m e a, usando o / como parametro de divisão
@@ -91,12 +91,12 @@ def main():                                                     # função inici
         exibe_da(d,m,a)
         exibe_dps_a(d,m,a)
 
-        x,y,z = d,m,a
-        i = 0
-        while i < 10:
-            x,y,z = exibe_ds2(d,m,a)
-            print(f'dia seguinte: {x:02}/{y:02}/{z}')
-            i += 1
+        x,y,z = d,m,a                                               # passamos o dia, mes e ano para as variaveis x, y e z
+        i = 0                                                       # inicializa a variavel I zerada
+        while i < 10:                                               # enquanto o valor de I não ultrapassar 10...
+            x,y,z = exibe_ds2(d,m,a)                                # os valores x, y e z recebem o retorno da função exbie_ds2
+            print(f'dia seguinte: {x:02}/{y:02}/{z}')               # imprimimos o valor obtido da função
+            i += 1                                                  # acrescemos o I de 1
     else:                                                           # se a função que confere a data devolver falso...
         print('Data invalida!')                                     # ...imprimimos que a data é invalida
 

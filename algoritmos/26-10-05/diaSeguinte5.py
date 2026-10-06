@@ -40,7 +40,8 @@ def bissexto(a:int) -> bool:                                    # função que c
     else:                                                           # senão...
         return False                                                # ...devolvemos falso, logo o ano não é bissexto
 
-def exibe_ds(d:int,m:int,a:int):                                # função que exibe o dia seguinte ao que foi informado
+# [Upgrade 1 - edição lucio, usando lista]
+def exibe_ds(d:int,m:int,a:int) -> list:                                # função que exibe o dia seguinte ao que foi informado
     if d+1 > dia_maximo(m, a):                                      # se o dia seguinte foi maior q o dia maximo daquele mes...
         d = 1                                                       # o proximo dia é o primeiro dia do mes
         m += 1                                                      # e passamos pro mes seguinte
@@ -49,86 +50,50 @@ def exibe_ds(d:int,m:int,a:int):                                # função que e
     if m > 12:                                                      # se o mes ultrapassar dezembro...
         m = 1                                                       # ...o mes seguinte será janeiro
         a += 1                                                      # e passamos pro proximo ano
-    print(f'dia seguinte: {d}/{m}/{a}')                             # imprimimos a data obtida
-
-# [Upgrade 1]
-def exibe_da(d:int,m:int,a:int):                                # função que exibe o dia anterior ao informado
-    if d-1 < 1:                                                     # se o dia anterior foi menor q o dia 1...
-        d = dia_maximo(m-1,a)                                       # ...o dia anterior será o dia maximo do mes anterior
-        m -= 1                                                      # e voltamos um mes
-    else:                                                           # senao...
-        d -= 1                                                      # ...só tiramos um dia
-    if m < 1:                                                       # se o mes for menor que janeiro...
-        m = 12                                                      # ...ele passará a ser dezembro
-        a -= 1                                                      # e voltamos um ano
-    print(f'dia anterior: {d}/{m}/{a}')                             # imprimimos a data obtida
-
-def exibe_da2(d:int,m:int,a:int) -> list:                                # função que exibe o dia anterior ao informado
-    if d-1 < 1:                                                     # se o dia anterior foi menor q o dia 1...
-        d = dia_maximo(m-1,a)                                       # ...o dia anterior será o dia maximo do mes anterior
-        m -= 1                                                      # e voltamos um mes
-    else:                                                           # senao...
-        d -= 1                                                      # ...só tiramos um dia
-    if m < 1:                                                       # se o mes for menor que janeiro...
-        m = 12                                                      # ...ele passará a ser dezembro
-        a -= 1                                                      # e voltamos um ano
     return [d,m,a]
-
-# [Upgrade 2]
-def exibe_dps_a(d:int,m:int,a:int):                             # função que exibe dois dias depois da data informada
-    if d+2 > dia_maximo(m, a):                                      # se depois de amanha ultrapassar o dia maximo do mes...
-        d = d + 2 - dia_maximo(m, a)                                # ...o dia passará a ser ele, acrescido de 2 menos o mes inteiro
-        m += 1                                                      # e passamos de mes
-    else:                                                           # senao...
-        d += 2                                                      # ...só passamos 2 dias
-    if m > 12:                                                      # se o mes passar de dezembro...
-        m = 1                                                       # ...o mes passará a ser janeiro
-        a += 1                                                      # e passamos de ano
-    print(f'dois dias depois: {d}/{m}/{a}')                         # imprimimos a data obtida
 
 # [Upgrade 2 - edição lucio, usando lista]
-def exibe_ds2(d:int,m:int,a:int) -> list:                                # função que exibe o dia seguinte ao que foi informado
-    if d+1 > dia_maximo(m, a):                                      # se o dia seguinte foi maior q o dia maximo daquele mes...
-        d = 1                                                       # o proximo dia é o primeiro dia do mes
-        m += 1                                                      # e passamos pro mes seguinte
-    else:                                                           # senão...
-        d += 1                                                      # ...só passamos pro dia seguinte
-    if m > 12:                                                      # se o mes ultrapassar dezembro...
-        m = 1                                                       # ...o mes seguinte será janeiro
-        a += 1                                                      # e passamos pro proximo ano
+def exibe_da(d:int,m:int,a:int) -> list:                        # função que exibe o dia anterior ao informado
+    if d-1 < 1:                                                     # se o dia anterior foi menor q o dia 1...
+        d = dia_maximo(m-1,a)                                       # ...o dia anterior será o dia maximo do mes anterior
+        m -= 1                                                      # e voltamos um mes
+    else:                                                           # senao...
+        d -= 1                                                      # ...só tiramos um dia
+    if m < 1:                                                       # se o mes for menor que janeiro...
+        m = 12                                                      # ...ele passará a ser dezembro
+        a -= 1                                                      # e voltamos um ano
     return [d,m,a]
 
-def exibe_varios_ds(d:int,m:int,a:int,qtd:int) -> None:
-    x,y,z = d,m,a
-    i = 0
-    while i < qtd:
-        x,y,z = exibe_ds2(d,m,a)
-        print(f'dia seguinte: {x:02}/{y:02}/{z}')
-        i += 1
 
-def exibe_varios_da(d:int,m:int,a:int,qtd:int) -> None:
-    x,y,z = d,m,a
-    i = 0
-    while i < qtd:
-        x,y,z = exibe_da2(d,m,a)
-        print(f'dia anterior: {x:02}/{y:02}/{z}')
-        i += 1
+def exibe_varios_ds(d:int,m:int,a:int,qtd:int) -> None:         # função que imprime as datas de acordo com a quantia informada pelo user, devolvendo nada
+    x,y,z = d,m,a                                                   # passamos dia, mes e ano para z, y e z
+    i = 0                                                           # inicializa o I zerado
+    while i < qtd:                                                  # enquanto o valor de I for menor que a quantia de dias
+        x,y,z = exibe_ds(d,m,a)                                     # x, y e z recebem o valor devolvido da função exibe_ds
+        print(f'dia seguinte: {x:02}/{y:02}/{z}')                   # imprimimos o valor obtido da função
+        i += 1                                                      # acrescemos 1 ao valor do I
+
+def exibe_varios_da(d:int,m:int,a:int,qtd:int) -> None:         # função que imprime as datas de acordo com a quantia informada pelo user, devolvendo nada
+    x,y,z = d,m,a                                                   # passamos dia, mes e ano para z, y e z
+    i = 0                                                           # inicializa o I zerado
+    while i < qtd:                                                  # enquanto o valor de I for menor que a quantia de dias
+        x,y,z = exibe_da(d,m,a)                                     # x, y e z recebem o valor devolvido da função exibe_da
+        print(f'dia anterior: {x:02}/{y:02}/{z}')                   # imprimimos o valor obtido da função
+        i += 1                                                      # acrescemos 1 ao valor do I
 
 def main():                                                     # função inicial, a que chama as outras e resolve o problema principal
     d, m, a= map(int, input('Data? ').split('/'))                   # pediremos ao usuario q digite uma data no formato dd/mm/aaaa, e depois convertemos para int e dividimos os valores nas variaveis d, m e a, usando o / como parametro de divisão
     if data_valida(d,m,a):                                          # checaremos se a data é valida, chamando a função responsavel pela conferencia, se a função devolver verdadeiro...
-        # exibe_ds(d,m,a)                                             # ...chamaremos as seguintes funções respectivamente: a que exibe o dia seguinte, a que exibe o dia anterior e a que exibe a data 2 dias depois
-        # exibe_da(d,m,a)
-        # exibe_dps_a(d,m,a)
 
+# ------ quantia de dias posteriores -------
+        x,y,z = d,m,a                                               # passamos dia, mes e ano para z, y e z
+        qtd_dps = int(input('Quantos dias depois? '))               # pedimos q o usuario digite a quantia de dias posteriores a data
+        exibe_varios_ds(d,m,a,qtd_dps)                              # chamamos a função que imprimirá as datas
 
-        qtd_dps = int(input('Quantos dias depois? '))
-        exibe_varios_ds(d,m,a,qtd_dps)
-
-# ------------------------------------
-        x,y,z = d,m,a
-        qtd_ant = int(input('Quantos dias antes? '))
-        exibe_varios_da(d,m,a,qtd_ant)
+# ------ quantia de dias anteriores -------
+        x,y,z = d,m,a                                               # passamos dia, mes e ano para z, y e z
+        qtd_ant = int(input('Quantos dias antes? '))                # pedimos q o usuario digite a quantia de dias anteriores a data
+        exibe_varios_da(d,m,a,qtd_ant)                              # chamamos a função que imprimirá as datas
         
     else:                                                           # se a função que confere a data devolver falso...
         print('Data invalida!')                                     # ...imprimimos que a data é invalida
