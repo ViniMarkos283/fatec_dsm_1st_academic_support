@@ -69,7 +69,7 @@ def exibe_varios_ds(d:int,m:int,a:int,qtd:int) -> None:         # função que i
     x,y,z = d,m,a                                                   # passamos dia, mes e ano para z, y e z
     i = 0                                                           # inicializa o I zerado
     while i < qtd:                                                  # enquanto o valor de I for menor que a quantia de dias
-        x,y,z = exibe_ds(d,m,a)                                     # x, y e z recebem o valor devolvido da função exibe_ds
+        x,y,z = exibe_ds(x,y,z)                                     # x, y e z recebem o valor devolvido da função exibe_ds
         print(f'dia seguinte: {x:02}/{y:02}/{z}')                   # imprimimos o valor obtido da função
         i += 1                                                      # acrescemos 1 ao valor do I
 
@@ -77,7 +77,7 @@ def exibe_varios_da(d:int,m:int,a:int,qtd:int) -> None:         # função que i
     x,y,z = d,m,a                                                   # passamos dia, mes e ano para z, y e z
     i = 0                                                           # inicializa o I zerado
     while i < qtd:                                                  # enquanto o valor de I for menor que a quantia de dias
-        x,y,z = exibe_da(d,m,a)                                     # x, y e z recebem o valor devolvido da função exibe_da
+        x,y,z = exibe_da(x,y,z)                                     # x, y e z recebem o valor devolvido da função exibe_da
         print(f'dia anterior: {x:02}/{y:02}/{z}')                   # imprimimos o valor obtido da função
         i += 1                                                      # acrescemos 1 ao valor do I
 

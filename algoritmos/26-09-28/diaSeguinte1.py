@@ -47,9 +47,7 @@ def exibe_ds(d:int,m:int,a:int):                                # função que e
 def main():                                                     # função inicial, a que chama as outras e resolve o problema principal
     d, m, a= map(int, input('Data? ').split('/'))                   # pediremos ao usuario q digite uma data no formato dd/mm/aaaa, e depois convertemos para int e dividimos os valores nas variaveis d, m e a, usando o / como parametro de divisão
     if data_valida(d,m,a):                                          # checaremos se a data é valida, chamando a função responsavel pela conferencia, se a função devolver verdadeiro...
-        exibe_ds(d,m,a)                                             # ...chamaremos as seguintes funções respectivamente: a que exibe o dia seguinte, a que exibe o dia anterior e a que exibe a data 2 dias depois
-        exibe_da(d,m,a)
-        exibe_dps_a(d,m,a)
+        exibe_ds(d,m,a)                                             # ...chamaremos a função que exibe o dia seguinte
     else:                                                           # se a função que confere a data devolver falso...
         print('Data invalida!')                                     # ...imprimimos que a data é invalida
 
