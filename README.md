@@ -21,7 +21,7 @@ fatec_dsm_1st_academic_support/
 │   │   ├── script.py
 │   │   └── anotacoes.md
 │   └── Aula [AAAA-MM-DD]/
-│       └── exercicios do beecrowd.py
+│       └── exercicios_beecrowd.py
 ├── Desenvolvimento Web I/
 │   └── Aula [AAAA-MM-DD]/
 │       ├── index.html
@@ -58,6 +58,28 @@ A tabela abaixo apresenta as disciplinas contempladas pelo repositório, os tipo
 3. Execute os códigos quando aplicável.
 4. Utilize os materiais como apoio à prática e à revisão.
 
+## Anotações Complementares
+
+Além dos arquivos disponibilizados neste repositório, você pode consultar as anotações complementares no Notion, com explicações escritas e conteúdos de apoio às disciplinas.
+
+* **[Acessar as anotações no Notion](https://app.notion.com/p/3db286a60ae180428b64f32a3d24d016?v=1b9286a60ae1823f8e6688b537150870&source=copy_link)**
+
+As anotações têm como objetivo facilitar a revisão dos conteúdos apresentados em aula e complementar os exemplos práticos disponíveis neste repositório.
+
+### Orientações para comentários
+
+Os comentários estão disponíveis para dúvidas, sugestões e correções relacionadas ao conteúdo das anotações.
+
+Para manter o ambiente útil para todos:
+
+* Mantenha os comentários relacionados ao conteúdo acadêmico.
+* Ao apontar um erro, indique o trecho e, se possível, sugira uma correção.
+* Evite compartilhar informações pessoais ou publicar dados de terceiros.
+
+As contribuições poderão ser utilizadas para melhorar os materiais de apoio.
+
+
+
 ## Contribuições
 Sua participação é importante para melhorar os materiais de apoio!
 
@@ -77,5 +99,9 @@ oficiais dos professores.
 ## Previsão de atualizações
 Novos materiais serão adicionados conforme o andamento das aulas e a disponibilidade de conteúdo revisado. As atualizações poderão ocorrer ao longo da semana, de acordo com a demanda e o tempo necessário para preparar cada material.
 
-## FAQ (feitas de forma coletiva)
-[ nada por enquanto ]
+## FAQ da turma
+Esta seção reunirá perguntas frequentes dos alunos e suas respectivas respostas, com o objetivo de esclarecer dúvidas recorrentes e facilitar o acesso ao conhecimento compartilhado.
+
+As perguntas serão selecionadas a partir das dúvidas recebidas e poderão ser respondidas diretamente nesta seção ou por meio de materiais complementares.
+
+As dúvidas serão publicadas sem identificação dos alunos.
