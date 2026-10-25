@@ -7,15 +7,15 @@
     idades antes da primeira negativa
 '''
 
-def coleta_idades() -> list:
-    idades = []
-    i = 1
-    idade = int(input(f'{i} idade: '))
-    while idade >= 0:
-        idades.append(idade)
-        i +=1
-        idade = int(input(f'{i} idade: '))
-    return idades
+def coleta_idades() -> list:                    # função para coleta de idades, deverá devolver uma lista no final
+    idades = []                                     # inicia uma lista vazia chamada idades
+    i = 1                                           # inicia um contador direto no 1
+    idade = int(input(f'{i} idade: '))              # pede que o usuario informe uma idade
+    while idade >= 0:                               # enquanto a idade não for um valor negativo...
+        idades.append(idade)                        # a lista idades recebe a idade informada pelo usuario
+        i +=1                                       # o contador acrescenta 1
+        idade = int(input(f'{i} idade: '))          # ele volta a perguntar novamente a idade ao usuario
+    return idades                                   # ao fim do loop, devolvemos a lista idades preenchida
 
 def menor_idade(idades:list) -> int:
     m = idades[0]
