@@ -47,9 +47,9 @@ A tabela abaixo apresenta as disciplinas contempladas pelo repositório, os tipo
 
 | Disciplina            | Conteúdos                                              | Status                |
 | --------------------- | ------------------------------------------------------ | --------------------- |
-| Desenvolvimento Web I | Resumos, exemplos de código e materiais complementares | 🟡 Em desenvolvimento |
+| Desenvolvimento Web I | Resumos, exemplos de código e materiais complementares | ✅ Disponível |
 | Algoritmos e lógica de programação           | Scripts comentados, exemplos práticos e exercícios resolvidos    | ✅ Disponível |
-| Modelagem de Dados    | Modelos conceituais e lógicos, diagramas e scripts SQL | 🟡 Em desenvolvimento          |
+| Modelagem de Dados    | Modelos conceituais e lógicos, diagramas e scripts SQL | ✅ Disponível          |
 
 
 ## Como utilizar
