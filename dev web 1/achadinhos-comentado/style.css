@@ -1,0 +1,85 @@
+/* =====================================================
+   style.css - o NOSSO CSS (vem depois do Bootstrap)
+   O Bootstrap faz o grosso; aqui só ajustamos o que é nosso.
+
+   esse css está sendo importado por todas as paginas do projeto achadinhos
+   ===================================================== */
+
+/* Cor e fonte da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  /* suaviza a troca para o modo escuro */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+  color: #0b5e3c; /* verde da marca */
+}
+
+/* ===== A PONTE ENTRE CSS E JS =====
+   O JavaScript não pinta nada. Ele só coloca ou tira a classe
+   "escuro" no <body>. Quem muda o visual é o CSS abaixo. */
+body.escuro {
+  background-color: #1e1e2e;
+  color: #f0f0f0;
+}
+
+body.escuro h1,
+body.escuro h2 {
+  color: #7be0ae;
+}
+
+/* Peças do Bootstrap que têm fundo próprio precisam de ajuste */
+body.escuro .navbar,
+body.escuro .card {
+  background-color: #2a2a3d !important;
+  color: #f0f0f0;
+}
+
+body.escuro .navbar-brand,
+body.escuro .nav-link,
+body.escuro .card-title {
+  color: #f0f0f0;
+}
+
+body.escuro .secao-clara {
+  background-color: #252536 !important;
+}
+
+body.escuro .table {
+  --bs-table-bg: transparent;
+  --bs-table-color: #f0f0f0;
+  --bs-table-striped-bg: #2a2a3d;
+  --bs-table-striped-color: #f0f0f0;
+  --bs-table-border-color: #555570;
+}
+
+body.escuro .alert-success {
+  background-color: #1d3b2c;
+  color: #c8f2dc;
+  border-color: #2e6b4a;
+}
+
+body.escuro .form-control,
+body.escuro .form-select {
+  background-color: #2a2a3d;
+  color: #f0f0f0;
+  border-color: #555570;
+}
+
+/* ===== Mensagens do formulário (o JS escolhe qual classe usar) ===== */
+.erro {
+  color: #c62828;
+  font-weight: bold;
+}
+
+.sucesso {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.campo-invalido {
+  border: 2px solid #c62828;
+}

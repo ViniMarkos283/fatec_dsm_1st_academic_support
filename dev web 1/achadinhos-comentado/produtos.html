@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos - Achadinhos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html#inicio">Achadinhos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="produtos.html">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre nós</a></li>
+            <li class="nav-item"><a class="nav-link" href="enviar.html">Enviar achadinho</a></li>
+          </ul>
+          <button id="btn-tema" class="btn btn-outline-secondary btn-sm ms-md-3 mt-2 mt-md-0">🌙 Modo escuro</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="produtos" class="container py-5">
+      <div class="row g-4 align-items-center mb-5">
+        <div class="col-md-6">
+          <h1 class="h2">Aqui você encontra:</h1>
+          <ol type="I" start="10" reversed>
+            <li>Vestuário
+              <ul type="square">
+                <li>Camisetas</li>
+                <li>Calças</li>
+                <li>Vestidos</li>
+                <li>Calçados</li>
+              </ul>
+            </li>
+            <li>Cosméticos
+              <ul type="square">
+                <li>Hidratantes</li>
+                <li>Shampoo</li>
+                <li>Sabonete</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div class="col-md-6">
+          <img src="imagens/brecho02.jpg" alt="Mais uma vista do brechó, com peças de roupa organizadas em araras e prateleiras." class="img-fluid rounded shadow-sm">
+        </div>
+      </div>
+
+      <h2 class="h4">Ofertas selecionadas nas últimas 24 horas</h2>
+
+      <!-- table-responsive: no celular a tabela ganha rolagem lateral -->
+      <div class="table-responsive">
+        <table class="table table-striped align-middle">
+          <thead>
+            <tr>
+              <th>Foto</th><th>Produto</th><th>Categoria</th><th>Preço antigo</th><th>Preço novo</th><th>Loja</th><th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="imagens/jaqueta.jpg" alt="Jaqueta jeans usada" width="80" class="rounded"></td>
+              <td>Jaqueta jeans</td>
+              <td>Vestuário</td>
+              <td><del>R$ 120,00</del></td>
+              <td class="fw-bold text-success">R$ 65,00</td>
+              <td>Brechó Achadinhos</td>
+              <td><a href="#" class="btn btn-sm btn-primary">Ver oferta</a></td>
+            </tr>
+            <tr>
+              <td><img src="imagens/vestido.jpg" alt="Vestido floral" width="80" class="rounded"></td>
+              <td>Vestido floral midi</td>
+              <td>Vestuário</td>
+              <td><del>R$ 89,90</del></td>
+              <td class="fw-bold text-success">R$ 49,90</td>
+              <td>Brechó Achadinhos</td>
+              <td><a href="#" class="btn btn-sm btn-primary">Ver oferta</a></td>
+            </tr>
+            <tr>
+              <td><img src="imagens/hidratante.jpg" alt="Hidratante corporal" width="80" class="rounded"></td>
+              <td>Hidratante corporal 400ml</td>
+              <td>Cosméticos</td>
+              <td><del>R$ 39,90</del></td>
+              <td class="fw-bold text-success">R$ 22,90</td>
+              <td>Mercado Livre</td>
+              <td><a href="#" class="btn btn-sm btn-primary">Ver oferta</a></td>
+            </tr>
+            <tr>
+              <td><img src="imagens/tenis.jpg" alt="Tênis casual" width="80" class="rounded"></td>
+              <td>Tênis casual unissex</td>
+              <td>Calçados</td>
+              <td><del>R$ 159,90</del></td>
+              <td class="fw-bold text-success">R$ 99,90</td>
+              <td>Shopee</td>
+              <td><a href="#" class="btn btn-sm btn-primary">Ver oferta</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><a href="enviar.html">Não encontrou o que procurava? Envie seu próprio achadinho</a></p>
+    </section>
+  </main>
+
+  <footer class="border-top py-4 text-center">
+    <div class="container">
+      <p class="mb-1">&copy; 2026 Achadinhos. Todos os direitos reservados.</p>
+      <a href="#" class="me-3">Política de Privacidade</a>
+      <a href="#" class="me-3">Termos de Uso</a>
+      <a href="produtos.html">Voltar ao topo</a>
+    </div>
+  </footer>
+
+</body>
+</html>
